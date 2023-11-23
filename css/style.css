@@ -182,6 +182,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: space-around;
 }
 
 .preco-item {
@@ -189,4 +190,161 @@
     border: 4px solid #ffff;
     padding: 20px;  
     margin: 10px;
+}
+
+.preco-item h2 {
+    font-size: 3em;
+    color: var(--Color-gray-Soft);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preco-item span {
+    max-width: 300px;
+    margin: 20px auto;
+    border-top: 4px solid var(--Background-blue-dark);
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.preco-item sup {
+    /*rem leva em consideração o tamanho da fonte do root*/
+    font-size: 1.5rem;
+}
+
+.preco-item ul {
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1.25em;
+    font-style: italic;
+    color: var(--Color-gray-Strong);
+}
+
+.preco-item li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.preco-item a {
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid;
+    color: var(--Color-Black-Bright);
+    text-transform: uppercase;
+    font-weight: bold;    
+    padding: 15px 0;
+    text-align: center;
+    font-size: 2.25em;
+    text-decoration: none;
+}
+
+/* QUALIDADE */
+
+.qualidade{
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item {
+    min-width: 300px;
+    width: 300px;
+    margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+    font-size: 2.25em;
+    color: var(--Color-gray-Soft);
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before{
+    content: '';
+    width: 8px;
+    height: 30px;
+    display: inline-block;
+}
+
+/* nth-child()= acessa os elementos filho conforme a sua ordem. Ex: qualidade-item:nth-child(1) acessa o primeiro filho de nome qualidade-item e assim por diante */
+
+.qualidade-item:nth-child(1) h2::before{
+    background: var(--Row-Purple);
+}
+
+.qualidade-item:nth-child(2) h2::before{
+    background: var(--Row-Pink);
+}
+
+.qualidade-item:nth-child(3) h2::before{
+    background: var(--Row-blue);
+}
+
+.qualidade-item:nth-child(4) h2::before{
+    background: yellow;
+}
+
+.qualidade-item:nth-child(5) h2::before{
+    background: var(--Background-blue-Bright);
+}
+
+.qualidade-item:nth-child(6) h2::before{
+    background: var(--Color-gray-Soft);
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    background: var(--Background-Gray-soft);
+    padding: 60px 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-info {
+    min-width: 200px;
+    width: 200px;
+    margin: 0 10px;
+}
+
+.newsletter-info h2{
+    font-size: 3em;
+    color: var(--Color-gray-Soft);
+}
+
+.newsletter-info p {
+    font-size: 1.25em;
+    font-style: italic;
+    max-width: 230px;
+    color: var(--Color-gray-Strong);
+    margin-bottom: 10px;
+}
+
+.newsletter-form{
+    min-width: 260px;
+    width: 300px;
+    margin: 0 10px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input{
+    min-width: 200px;
+    width: 300px;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    color: var(--Color-gray-Strong);
+    font-style: italic;
+    border: 4px solid var(--Background-blue-Bright);
+    background: transparent;
+    padding: 15px 10px;
+    margin: 0px;
+    border-radius: 0px;
 }
